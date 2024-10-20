@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
+    <title>Products | Sports Merchandise</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.html">
+            <img src="Screenshot 2024-10-07 113850.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+            Sports Merchandise Website
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#clothing-section">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-section">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="login.html">Login</a></li>
+                <form class="form-inline my-2 my-lg-0" action="products.html" method="get">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="text-center">Our Products</h1>
+        <div class="categories text-center mb-4">
+            <button onclick="showCategory('clothing')" class="btn btn-primary">Browse Clothing</button>
+            <button onclick="showCategory('accessories')" class="btn btn-primary">Browse Accessories</button>
+            <button onclick="showCategory('equipment')" class="btn btn-primary">Browse Equipment</button>
+        </div>
+
+        <div id="product-list">
+            <!-- Clothing Products -->
+            <div class="product-category clothing" id="clothing-section">
+                <h2>Clothing</h2>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/41BAee+PsUL._AC_UY1100_.jpg" alt="Ronaldo Portugal Jersey" style="width: 250px; height: auto;"> 
+                    <p>Name: Ronaldo Portugal Jersey</p>
+                    <p>Price: 289 INR</p>
+                    <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="1">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://cyberriedstore.com/wp-content/uploads/2023/10/Cristiano-ronaldo-2017-18-home-full-sleeve-jersey-product.png" alt="Ronaldo Real Madrid Home Jersey" style="width: 250px; height: auto;"> 
+                    <p>Name: Ronaldo Real Madrid Home Jersey Season 17/18</p>
+                    <p>Price: 399 INR</p>
+                    <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="2">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://cyberriedstore.com/wp-content/uploads/2023/09/Manchester-united-2007-09-critiano-ronaldo-home-jersey-product.png" alt="Ronaldo Retro Jersey" style="width: 250px; height: auto;"> 
+                    <p>Name: Ronaldo Retro Jersey</p>
+                    <p>Price: 500 INR</p>
+                    <button class="add-to-cart" data-product-id="3">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="3">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://cyberriedstore.com/wp-content/uploads/2023/08/al-nassr-away-jersey-2023-24-Cristiano-ronaldo-number-7-printed-product.png" alt="Ronaldo Al Nassr Jersey" style="width: 250px; height: auto;"> 
+                    <p>Name: Ronaldo Al Nassr Jersey</p>
+                    <p>Price: 400 INR</p>
+                    <button class="add-to-cart" data-product-id="4">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="4">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://i0.wp.com/www.copycatz.in/wp-content/uploads/2024/03/portugal-sporting-CR7-jersey-scaled.webp?fit=2560%2C2560&ssl=1" alt="CR7 Sporting Lisbon" style="width: 250px; height: auto;"> 
+                    <p>Name: CR7 Sporting Lisbon</p>
+                    <p>Price: 800 INR</p>
+                    <button class="add-to-cart" data-product-id="5">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="5">Add to Wishlist</button>
+                </div>
+            </div>
+
+            <!-- Accessories Products -->
+            <div class="product-category accessories hidden" id="accessories-section">
+                <h2>Accessories</h2>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/91Qr228LQZL._AC_UF894,1000_QL80_.jpg" alt="Lebron James Jersey" style="width: 250px; height: auto;">
+                    <p>Name: Lebron James Jersey</p>
+                    <p>Price: 850 INR</p>
+                    <button class="add-to-cart" data-product-id="6">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="6">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71wQXOQObdL._AC_UF894,1000_QL80_.jpg" alt="Adida World Cup Football" style="width: 250px; height: auto;"> 
+                    <p>Name: Adida World Cup Football</p>
+                    <p>Price: 50,000 INR</p>
+                    <button class="add-to-cart" data-product-id="7">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="7">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqTZoeqmJOGtB8WCrCNTxvxG159V30xhPCXuCUI9eiMq-xt1L3OVhzEEAFbWUDa5mRU5Vt-vzohSshLicCq6TZ1AsilUoPDEJY7WHVqrJdD2uVKQqdg7SDvSiiT7erbS91kh-5YnJmXgAn84HexALDInkTv6WDfDG-4cSRpM123ed8mJoYEGTreOogDpQ/s1600/adidas-vivid-horizon-pack%20%2811%29.jpg" alt="Cleats Pack OF 3" style="width: 250px; height: auto;"> 
+                    <p>Name: Cleats Pack OF 3</p>
+                    <p>Price: 90,000 INR</p>
+                    <button class="add-to-cart" data-product-id="8">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="8">Add to Wishlist</button>
+                </div>
+            </div>
+
+            <!-- Equipment Products -->
+            <div class="product-category equipment hidden" id="equipment-section">
+                <h2>Equipment</h2>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScdwTwDNA8mOaBWo4Pud2mLCAkqiaBW88Crg&s" alt="VK Cricket Bat" style="width: 250px; height: auto;">
+                    <p>Name: VK Cricket Bat</p>
+                    <p>Price: 70,000 INR</p>
+                    <button class="add-to-cart" data-product-id="9">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="9">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://cdn.nwscdn.com/media/catalog/product/cache/h700xw700/c/r/cricket-club-ball-family_1.jpg" alt="Official Cricket Match Balls" style="width: 250px; height: auto;"> 
+                    <p>Name: Official Cricket Match Balls</p>
+                    <p>Price: 1 Lakh INR</p>
+                    <button class="add-to-cart" data-product-id="10">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="10">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.golfzonleadbetter.com/wp-content/uploads/2023/10/Screenshot-2023-10-11-at-12.33.25-PM.png" alt="Golf Club And Ball Set" style="width: 250px; height: auto;"> 
+                    <p>Name: Golf Club And Ball Set</p>
+                    <p>Price: 15,00,000 INR</p>
+                    <button class="add-to-cart" data-product-id="11">Add to Cart</button>
+                    <button class="add-to-wishlist" data-product-id="11">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showCategory(category) {
+            const categories = document.querySelectorAll('.product-category');
+            categories.forEach((cat) => {
+                cat.classList.add('hidden'); // Hide all categories
+            });
+            const selectedCategory = document.querySelector(`.${category}`);
+            selectedCategory.classList.remove('hidden'); // Show selected category
+        }
+
+        // Show clothing products by default
+        showCategory('clothing');
+
+        // Add to Cart Functionality (Example - you'll need to implement cart management)
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.dataset.productId;
+                alert(`Product with ID ${productId} added to cart!`); // Replace with your cart logic
+            });
+        });
+
+        // Add to Wishlist Functionality (Example - you'll need to implement wishlist management)
+        const addToWishlistButtons = document.querySelectorAll('.add-to-wishlist');
+        addToWishlistButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.dataset.productId;
+                alert(`Product with ID ${productId} added to wishlist!`); // Replace with your wishlist logic
+            });
+        });
+
+    </script>
+
+    <footer>
+        <p>© 2024 Sports Merchandise. All rights reserved. | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a href="#">Vision</a></p>
+        <p>Connect with us: 
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </p>
+    </footer>
+</body>
+</html>

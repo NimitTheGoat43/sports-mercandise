@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile | Sports Merchandise</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="Screenshot 2024-10-07 113850.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+            Sports Merchandise Website
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls = "navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html">Wishlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="text-center">Edit Profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="profileForm" onsubmit="return validateProfile()">
+                            <div class="form-group">
+                                <label for="profileName">Name</label>
+                                <input type="text" id="profileName" class="form-control" placeholder="Enter your name">
+                                <small id="nameError" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileEmail">Email</label>
+                                <input type="email" id="profileEmail" class="form-control" placeholder="Enter your email">
+                                <small id="emailError" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePassword">Password</label>
+                                <input type="password" id="profilePassword" class="form-control" placeholder="Enter a new password">
+                                <small id="passwordError" class="form-text text-danger"></small>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-success" onclick="viewOrders()">View Orders</button>
+                    <button class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Sports Merchandise. All rights reserved. | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+        <p>Connect with us: 
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </p>
+    </footer>
+
+    <!-- Include JS for validation -->
+    <script src="profile.js"></script> 
+    <script>
+        // Dummy functions for orders and account deletion
+        function viewOrders() {
+            alert('Your order history will be displayed here.');
+        }
+
+        function deleteAccount() {
+            if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+                alert('Your account has been deleted.');
+            }
+        }
+    </script>
+</body>
+
+</html>
